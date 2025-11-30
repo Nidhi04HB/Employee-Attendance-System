@@ -1,0 +1,155 @@
+/* 🌟 Centered Glassmorphic Wrapper */
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 35px 40px;
+  border-radius: 15px;
+
+  /* Gradient + Glass effect */
+  background: linear-gradient(135deg, rgba(255,0,150,0.2), rgba(72,0,255,0.2));
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(40px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Heading */
+.wrapper h2 {
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+/* Input Box */
+.wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 25px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+  outline: none;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.input-box input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.input-box input:focus {
+  border-color: #ff00ff;
+  box-shadow: 0 0 12px rgba(255,0,255,0.6);
+  background: rgba(255,255,255,0.1);
+}
+
+/* Input Icon */
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #ffb3ff;
+}
+
+/* Select Dropdown */
+.wrapper select {
+  width: 100%;
+  height: 50px;
+  background: rgba(255,255,255,0.05);
+  outline: none;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 20px;
+  appearance: none;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 15px;
+}
+
+.wrapper select:hover,
+.wrapper select:focus {
+  border-color: #ff00ff;
+  box-shadow: 0 0 12px rgba(255,0,255,0.5);
+}
+
+/* Select Option */
+.wrapper select option {
+  color: #333;
+  background: #fff;
+}
+
+/* Button */
+.wrapper button {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff00ff, #7200ff);
+  box-shadow: 0 0 15px rgba(255,0,255,0.4);
+  transition: all 0.3s ease;
+}
+
+.wrapper button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,0,255,0.7);
+  background: linear-gradient(135deg, #ff33ff, #9c33ff);
+}
+
+/* Register Link */
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: #ffe3ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+  color: #ff80ff;
+}

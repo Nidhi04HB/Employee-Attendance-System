@@ -1,0 +1,156 @@
+/* 🌈 Overview Container */
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  color: #fff;
+}
+
+/* Heading */
+.overview-container h2 {
+  text-align: center;
+  font-size: 26px;
+  margin: 20px 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+/* Filter Container */
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-container select,
+.input-select {
+  width: 200px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 0 20px;
+  color: #fff;
+  appearance: none;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-container select:hover,
+.input-select:hover,
+.filter-container select:focus,
+.input-select:focus {
+  border-color: #ff33ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+}
+
+/* Attendance Table & Container */
+.attendance-table,
+.attendance-table-container,
+.attendance-detail-table {
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 12px;
+  padding: 25px 35px;
+  margin-top: 20px;
+  background: linear-gradient(145deg, rgba(72,0,255,0.2), rgba(255,0,150,0.2));
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(40px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  overflow-x: auto;
+}
+
+.attendance-table th,
+.attendance-table td,
+.attendance-detail-table th,
+.attendance-detail-table td {
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.attendance-table th,
+.attendance-detail-table th {
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.attendance-table tbody tr:hover,
+.attendance-detail-table tbody tr:hover {
+  background: rgba(255, 0, 255, 0.1);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+}
+
+/* Total Days Container */
+.total-days-container {
+  background: linear-gradient(120deg, rgba(255,0,150,0.2), rgba(72,0,255,0.2));
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.total-days-container h3 {
+  margin-bottom: 12px;
+  text-shadow: 0 0 6px rgba(255, 0, 255, 0.5);
+}
+
+.total-days-container ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Scrollbar Styling */
+.scrollable-table::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-table::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+  background: #ff33ff;
+  border-radius: 4px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb:hover {
+  background: #ff80ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-container select,
+  .input-select {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .total-days-container {
+    padding: 15px;
+  }
+}
